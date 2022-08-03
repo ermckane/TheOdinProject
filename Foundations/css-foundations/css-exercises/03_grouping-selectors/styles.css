@@ -1,0 +1,15 @@
+.choice1,
+.choice2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+}
+
+.choice1 {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+.choice2 {
+  background-color: rgb(24, 110, 24);
+  color: black;
+}
