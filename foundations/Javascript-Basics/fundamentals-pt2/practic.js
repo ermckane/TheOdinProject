@@ -45,8 +45,8 @@ console.log(newtext2);
 
 const button = document.querySelector('button');
 
-
 const hour = new Date().getHours();
+
 let greeting;
     if (hour < 10) {
         greeting = "Good morning";
@@ -61,3 +61,59 @@ function greet() {
 }
 
 button.addEventListener('click', greet);
+
+// Set the current day of the week to a variable, with 0 being Sunday and 6 being Saturday
+const day = new Date().getDay();
+
+switch (day) {
+	case 0:
+		console.log("It's Sunday, time to relax!");
+		break;
+	case 1:
+		console.log("Happy Monday!");
+		break;
+	case 2:
+		console.log("It's Tuesday. You got this!");
+		break;
+	case 3:
+		console.log("Hump day already!");
+		break;
+	case 4:
+		console.log("Just one more day 'til the weekend!");
+		break;
+	case 5:
+		console.log("Happy Friday!");
+		break;
+	case 6:
+		console.log("Have a wonderful Saturday!");
+		break;
+	default:
+		console.log("Something went horribly wrong...");
+}
+
+//Grade evaluator
+
+const grade = prompt('What was the grade?', '');
+
+switch (true) {
+  case grade > 100:
+    console.log('You are too powerful for this world and must be stopped!');
+    break;
+  case grade >= 90:
+    console.log("A");
+    break;
+  case grade >= 80:
+    console.log('B');
+    break;
+  case grade >= 70:
+    console.log('C');
+    break;
+  case grade >= 60:
+    console.log('D');
+    break;
+  case grade < 60:
+    console.log('F');
+    break;
+  default:
+    console.log('This is weird....')
+}
