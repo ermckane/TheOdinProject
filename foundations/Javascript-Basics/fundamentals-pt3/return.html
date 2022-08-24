@@ -1,0 +1,55 @@
+25 lines (22 sloc) 474 Bytes
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squared(number) {
+        return number * number;
+    }
+
+    function cubed(number) {
+        return number ** 3;
+    }
+
+    function factorial(number) {
+        if (number < 0) return undefined;
+        if (number === 0) return 1;
+        let x = number -1;
+        while (x > 1) {
+            number *= x;
+            x--
+        } 
+        return number;   
+    }
+
+    input.addEventListener('change', () => {
+        const num = parseFloat(input.value);
+        if (isNaN(num)) {
+            para.textContent = 'You need to enter a number!';
+        } else {
+            para.textContext = `${num} squared is ${squared(num)}.`;
+            para.textContext += `${num} cubed is ${cubed(num)}.`;
+            para.textContext += `${num} factorial is ${factorial(num)}.`;
+        }
+    });
+  </script>
+</body>
+</html>

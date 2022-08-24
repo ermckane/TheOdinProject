@@ -12,3 +12,9 @@ function myFunction() {
 
   const madeAnotherString = myArray.join('|');
   console.log(madeAnotherString);
+
+const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+
+textBox.addEventListener('keydown', (event) => output.textContent 
+= `I watched you press "${event.key}".`);
